@@ -113,7 +113,7 @@ function imge_type(key) {
 function uploadAPI(file, custome_labels) {
   return sdk.uploadPut({
     "object": file.name,
-    "folder": "photo-s3-chenli",
+    "folder": "b2photoszj",
   }, file, {
     "headers": {
       "Content-Type": imge_type(file.name),
@@ -160,7 +160,7 @@ $(document).ready(function () {
     var file = $("#customFile").prop('files')[0]
     var custome_labels = $("#label-buffer").val().trim()
     var key = file.name
-    var url = "https://gens1kuin3.execute-api.us-east-1.amazonaws.com/v1/upload" 
+    var url = "https://2bhxipgbyj.execute-api.us-east-1.amazonaws.com/v1/upload" 
     console.log(custome_labels)
     axios.put(url, file, {
       headers: {
